@@ -2,34 +2,34 @@ package life.majd.coronatracker.models;
 
 public class LocationCovidData {
 
-    private String State;
-    private String Country;
+    private String state;
+    private String country;
     private int cases;
     private String latCord;
     private String longCord;
 
     public LocationCovidData(String state, String country, int cases, String latCord, String longCord) {
-        State = state;
-        Country = country;
+        this.state = state;
+        this.country = country;
         this.cases = cases;
         this.latCord = latCord;
         this.longCord = longCord;
     }
 
     public String getState() {
-        return State;
+        return this.state;
     }
 
     public void setState(String state) {
-        State = state;
+        this.state = state;
     }
 
     public String getCountry() {
-        return Country;
+        return this.country;
     }
 
     public void setCountry(String country) {
-        Country = country;
+        this.country = country;
     }
 
     public int getCases() {
@@ -43,8 +43,8 @@ public class LocationCovidData {
     @Override
     public String toString() {
         return "LocationCovidData{" +
-                "State='" + State + '\'' +
-                ", Country='" + Country + '\'' +
+                "State='" + state + '\'' +
+                ", Country='" + country + '\'' +
                 ", cases=" + cases +
                 ", latCord=" + latCord +
                 ", longCord=" + longCord +
