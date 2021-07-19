@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Covid-19 Cases - Global</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container" style="padding:20px">
+    <div class="row justify-content-md-center">
+        <div class="col-10">
+            <figure class="text-center">
+                <h1 class="blockquote">Covid-19 Cases </h1>
+                <p>This is an application that show the daily cases of Covid-19 worldwide.</p>
+                <hr>
+                <table class="table table-striped">
+                    <tr>
+                        <th>State</th>
+                        <th>Country</th>
+                        <th>Total Cases Today</th>
+                    </tr>
+                    <tr th:each="stat : ${stats}">
+                        <td th:text="${stat.State}"></td>
+                        <td th:text="${stat.Country}"></td>
+                        <td th:text="${stat.cases}"></td>
+                    </tr>
+                </table>
+            </figure>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
